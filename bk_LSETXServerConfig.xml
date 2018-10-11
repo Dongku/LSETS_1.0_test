@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <settings>
+    <mtengines>
+      <mtengine id="1" sourcelang="EN" sourcename="English" targetlang="ZH" targetname="Simplified Chinese" domaincode="1310760" domainname="Patents and Legal"></mtengine>
+      <mtengine id="2" sourcelang="ZH" sourcename="Simplified Chinese" targetlang="EN" targetname="English" domaincode="1310577" domainname="Patents and Legal"></mtengine>
+    </mtengines>
+    <projectno>8506</projectno>
+    <api enabled="1">
+		<apikey>RESTAPIKey-lsetsruntime</apikey>
+		<apiurl>http://172.17.105.172/lsrestapi/LSRESTAPI.V5.jsp</apiurl>
+	</api>
+    <autodetectsourcelang enabled="0"/>
+    <displaypageplanguageoption enable="0"/>
+    <rtllanglist>ar,dv,fa,he,ku,ur</rtllanglist>
+	<emaildocumentoncompletion enable="1">
+	  <smtpserver>mail.omniscien.com</smtpserver>
+	  <smtpport>25</smtpport>
+	  <smtpusername>waranya.tankan@omniscien.com</smtpusername>
+	  <smtppassword>ppuumm@18</smtppassword>
+	  <smtpencryptiontype>None</smtpencryptiontype>
+	  <body><![CDATA[]]></body>
+	  <sendernamedefault>Translation Admin</sendernamedefault>
+	  <senderemaildefault>LSETX@omniscien.com</senderemaildefault>
+	  <subjectdefault>The translation output</subjectdefault>		
+	  <bodydefault><![CDATA[]]></bodydefault>
+	  <prioritydefault>3</prioritydefault>
+	</emaildocumentoncompletion>	  
+    <pdfsupport enabled="0">
+      <TODO>CONFIG FOR ABBYY</TODO>
+    </pdfsupport>
+    <langnames>
+      <lang langid="en" en="English" fr="Anglais" ms="Inggeris" id="Inggeris" zh="英语" zhhk="英語" ja="英語" de="Englisch"/>
+      <lang langid="fr" en="French" fr="Französisch" ms="Perancis" id="Perancis" zh="法语" zhhk="法語" ja="フランス語" de="Französisch"/>
+    </langnames>
+  </settings>
+  <display>
+    <pagecss><![CDATA[]]></pagecss>
+    <lang id="en" name="English">
+      <heading>
+        <logourl>/resources/images/Logo.png</logourl>
+        <pageheading>Private and Secure Translation</pageheading>
+      </heading>
+      <translationchoices>
+        <buttontranslate>Translate</buttontranslate>
+        <buttonreset>Reset</buttonreset>
+        <buttoncopy>Copy</buttoncopy>
+        <cleartooltip>Clear Text</cleartooltip>
+        <copytooltip>Copy to Clipbord</copytooltip>
+      </translationchoices>
+      <translationbox>
+        <textheaderlabel>Text</textheaderlabel>
+		<textplaceholder>Enter text here...</textplaceholder>		
+        <translationplaceholder>Text translation...</translationplaceholder>
+      </translationbox>
+      <documentbox>
+        <headinglable>Document(s)</headinglable>
+        <draglabel1>Drag and Drop Files</draglabel1>
+        <draglabel2>into this Box</draglabel2>
+        <draglabel3>or</draglabel3>		
+        <buttonbrowse>Browse for Files</buttonbrowse>
+        <documentoutputformatlabel>Output Format</documentoutputformatlabel>
+        <sameasdocumentlabel>Same as Document</sameasdocumentlabel>
+        <htmllabel>HTML</htmllabel>
+        <textlabel>Text file</textlabel>		
+        <documentaftertranslationlabel>After Translation</documentaftertranslationlabel>
+        <downloadlabel>Download Document</downloadlabel>
+        <emaildocumentlabel>Email Document as Attachment </emaildocumentlabel>
+		<selectfile>Select the engine and click translate button.</selectfile>
+		<tblfilename>Document(s) to translate</tblfilename>
+		<tblsize>Size</tblsize>
+		<tbllanguagepair>Language Pair</tbllanguagepair>
+		<tblstatus>Status</tblstatus>
+      </documentbox>
+	  <translate>
+		<statusqueue>Queue</statusqueue>
+		<statusprocessing>Processing</statusprocessing>
+		<statuscomplete>Complete</statuscomplete>
+		<statuserror>Error</statuserror>
+		<statuscancel>Cancel</statuscancel>
+	  </translate>
+      <domainnamemapping>
+        <domain id="1310760:1310760">English to Simplified Chinese (Patents and Legal)</domain>
+        <domain id="1310577:1310577">Simplified Chinese to English (Patents and Legal)</domain>
+      </domainnamemapping>
+      <errortext>
+		<errormaxchar>Maximum characters exceeded</errormaxchar>
+        <error id="1">Invalid document type.</error>
+        <error id="2">Unable to open document, may be corrupt.</error>
+        <error id="3">Another error</error>
+      </errortext>
+    </lang>
+    <lang id="zh" name="中文"  textalign="right">
+      <heading>
+        <logourl>/resources/images/Logo.png</logourl>
+        <pageheading>私密和安全的翻译</pageheading>
+      </heading>
+      <translationchoices>
+        <buttontranslate>翻译</buttontranslate>
+        <buttonreset>重启</buttonreset>
+        <buttoncopy>复制</buttoncopy>
+        <cleartooltip>明文</cleartooltip>
+        <copytooltip>复制到剪贴板</copytooltip>
+      </translationchoices>
+      <translationbox>
+        <textheaderlabel>文本</textheaderlabel>
+		<textplaceholder>在此输入文字…</textplaceholder>		
+        <translationplaceholder>文字翻译...</translationplaceholder>
+      </translationbox>
+      <documentbox>
+        <headinglable>文件</headinglable>
+        <draglabel1>拖放文件</draglabel1>
+        <draglabel2>进入这个盒子</draglabel2>
+        <draglabel3>要么</draglabel3>
+        <buttonbrowse>浏览文件</buttonbrowse>		
+        <documentoutputformatlabel>输出格式</documentoutputformatlabel>
+        <sameasdocumentlabel>与文档相同</sameasdocumentlabel>
+        <htmllabel>超文本标记语言</htmllabel>
+        <textlabel>文本文件</textlabel>		
+        <documentaftertranslationlabel>翻译后</documentaftertranslationlabel>
+        <downloadlabel>下载文件</downloadlabel>
+        <emaildocumentlabel>电子邮件文档作为附件</emaildocumentlabel>
+		<selectfile>选择引擎，然后单击翻译按钮。</selectfile>
+		<tblfilename>要翻译的文件</tblfilename>
+		<tblsize>尺寸</tblsize>
+		<tbllanguagepair>语言对</tbllanguagepair>
+		<tblstatus>状态</tblstatus>
+      </documentbox>
+	  <translate>	
+		<statusqueue>队列</statusqueue>
+		<statusprocessing>处理</statusprocessing>
+		<statuscomplete>完成</statuscomplete>
+		<statuserror>错误</statuserror>
+		<statuscancel>取消</statuscancel>
+	  </translate>
+      <domainnamemapping>
+        <domain id="1310760:1310760">英语到中文（专利和法律）</domain>
+        <domain id="1310577:1310577">中文到英文（专利和法律）</domain>
+      </domainnamemapping>
+      <errortext>
+		<errormaxchar>最大字符数超过</errormaxchar>
+      </errortext>
+    </lang>
+    <lang id="th" name="ภาษาไทย">
+      <heading>
+        <logourl>/resources/images/Logo.png</logourl>
+        <pageheading>การแปลส่วนบุคคล</pageheading>
+      </heading>
+      <translationchoices>
+        <buttontranslate>แปล</buttontranslate>
+        <buttonreset>ล้าง</buttonreset>
+        <buttoncopy>คัดลอก</buttoncopy>
+        <cleartooltip>ล้างข้อความ</cleartooltip>
+        <copytooltip>คัดลอกข้อความ</copytooltip>
+      </translationchoices>
+      <translationbox>
+        <textheaderlabel>ข้อความ</textheaderlabel>
+		<textplaceholder>พิมพ์ข้อความ...</textplaceholder>		
+        <translationplaceholder>ผลการแปล...</translationplaceholder>
+      </translationbox>
+      <documentbox>
+        <headinglable>เอกสาร</headinglable>
+        <draglabel1>ลากและวางไฟล์</draglabel1>
+        <draglabel2>บริเวณนี้</draglabel2>
+        <draglabel3>หรือ</draglabel3>		
+        <buttonbrowse>เลือกไฟล์</buttonbrowse>
+        <documentoutputformatlabel>รูปแบบผลลัพธ์</documentoutputformatlabel>
+        <sameasdocumentlabel>เหมือนเอกสารต้นฉบับ</sameasdocumentlabel>
+        <htmllabel>HTML</htmllabel>
+        <textlabel>ไฟล์ข้อความ</textlabel>		
+        <documentaftertranslationlabel>การรับผลการแปล</documentaftertranslationlabel>
+        <downloadlabel>ดาวน์โหลดเอกสาร</downloadlabel>
+        <emaildocumentlabel>ส่งอีเมล์</emaildocumentlabel>
+		<selectfile>เลือกภาษาและกดปุ่มแปล</selectfile>
+		<tblfilename>เอกสารแปล</tblfilename>
+		<tblsize>ขนาดไฟล์</tblsize>
+		<tbllanguagepair>คู่ภาษา</tbllanguagepair>
+		<tblstatus>สถานะการแปล</tblstatus>
+      </documentbox>
+	  <translate>	
+		<statusqueue>คิว</statusqueue>
+		<statusprocessing>อยู่ระหว่างการแปล</statusprocessing>
+		<statuscomplete>เสร็จสิ้น</statuscomplete>
+		<statuserror>เกิดข้อผิดพลาด</statuserror>
+		<statuscancel>ยกเลิก</statuscancel>
+	  </translate>
+      <domainnamemapping>
+        <domain id="1310760:1310760">จากภาษาอังกฤษเป็นภาษาจีน (หมวดสิทธิบัตรและกฎหมาย)</domain>
+        <domain id="1310577:1310577">จากภาษาจีนเป็นภาษาอังกฤษ (หมวดสิทธิบัตรและกฎหมาย)</domain>
+      </domainnamemapping>
+      <errortext>
+		<errormaxchar>มีอักขระเกินจำนวนที่กำหนดไว้</errormaxchar>
+      </errortext>
+    </lang>	
+  </display>
+</config>

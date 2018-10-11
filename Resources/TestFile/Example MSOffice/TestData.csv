@@ -1,0 +1,18 @@
+TestFile,demo.msg
+TestFile,demo.pdf
+TestFile,demo.txt
+TestFile,demo1.docx
+TestFile,demo1.html
+TestFile,demo1.pptx
+TestFile,demo1.xlsx
+TestFile,demo2.doc
+TestFile,demo2.htm
+TestFile,demo2.ppt
+TestFile,demo2.xls
+TestFile,demo_97_2000_xp.doc
+TestFile,ListFile.bat
+TestFile,TestData.csv
+TestFile,ZH_demo1.docx
+TestFile,ZH_demo2.doc
+TXT,EndOfTest.txt
+Exit,Do Not Test

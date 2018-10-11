@@ -1,0 +1,442 @@
+@CHARSET "UTF-8";
+
+#pageHeader {
+	width: 100%;
+	vertical-align: top;
+} 
+#pageLogo {
+	width: 20%;
+	text-align: left;
+}
+#pageHeading {
+	width: 60%;
+	font-family:sans-serif, tahoma, arial;
+	font-weight:bold;
+	font-size:24px;
+	text-align: left;
+	color: black; 
+	padding-left:15px;
+}
+#pageLang {
+	width: 20%;
+	text-align: right;
+	vertical-align:top;
+}
+#pageLangLabel {
+	font-family:sans-serif, tahoma, arial;
+	font-weight:bold;
+	font-size:10px;
+	color:red;
+}
+
+.divMain {
+	width: 100%;
+	vertical-align: top;
+}
+.tableMain {
+	width: 100%;
+	vertical-align: top;
+}
+#tblTranslateDocument {
+	width: 100%;
+	vertical-align: top;
+}
+.tdText {
+	background-color: white;
+	font-weight: normal;
+	white-space: nowrap;
+	vertical-align: top;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	text-align: left;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 1px dashed #E50000;
+}
+#selTranslatLang {
+	width: 150px;
+}
+.browse-uploadb {
+	padding: 10px 30px; 
+	font-size: 20px; 
+	background-color: #343a40; 
+	color: #fff; 
+	border-color: #343a40;  
+	border-radius: 0.3rem; 
+	cursor: pointer;
+}
+.browse-upload {
+	padding: 10px 30px; 
+	font-size: 20px; 
+	background-color: #343a40; 
+	color: #fff; 
+ 	border-color: #343a40;  
+	border-radius: 0.3rem; 
+	cursor: pointer;
+}
+#fBrowseFile{
+	display: none;
+}
+.textLableBold {
+	font-family: sans-serif, tahoma, arial; 
+	font-size: 12px; 
+	font-weight: bold;
+}
+.textLable {
+	font-family: sans-serif, tahoma, arial; 
+	font-size: 12px;
+	white-space:nowrap;
+}
+.dragDrop {
+	font-family: sans-serif, tahoma, arial; 
+	font-size: 14px;
+}
+#divCopyright{
+	width: 99%;
+	bottom: 0; 	
+	font-family: sans-serif, tahoma, arial; 
+	font-size: 10px; 
+	color: #999999;
+	font-weight: bold;
+	text-align:center;
+	padding-bottom: 5px;
+	background-color: #FFFFFF; 
+}
+.buttonNormal {
+	font-family: sans-serif, tahoma, arial; 
+	font-size: 12px; 
+	border: 1px solid #969696; 
+	background-color: #B7B7B7; 
+	color: #FFFFFF; 
+	font-weight: bold;
+	border-radius: 5px;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	width: 120px;
+	cursor: pointer;
+}
+.buttonBrowse {
+	font-family: sans-serif, tahoma, arial; 
+	font-size: 14px; 
+	border: none; 
+	color: #000000;
+	background-color: transparent;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	width: 150px;
+    transition-duration: 0.4s;
+	cursor: pointer;
+}
+.buttonBrowse:hover {
+	font-family: sans-serif, tahoma, arial; 
+	font-size: 14px; 
+	border: none; 
+	color: #000000;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	width: 150px;
+    transition-duration: 0.4s;
+}
+.divBrowse {
+	font-family: sans-serif, tahoma, arial; 
+	font-size: 14px; 
+	color: #000000;
+	border: 1px solid #FFFFFF; 
+	width: 170px;
+	cursor: pointer;
+	vertical-align: middle;
+	text-align: center;
+    transition-duration: 0.2s;
+	padding: 3px 3px;
+}
+.divBrowse:hover {
+	font-family: sans-serif, tahoma, arial; 
+	font-size: 14px; 
+	color: #000000;
+	border: 1px solid #999999; 
+    border-radius: 5px;
+	background-color: #E9E9E9;
+	width: 170px;
+	cursor: pointer;
+	vertical-align: middle;
+	text-align: center;
+	padding: 3px 3px;
+}
+.buttonReset {
+	font-family: sans-serif, tahoma, arial; 
+	font-size: 12px; 
+	border: 1px solid #969696; 
+	background-color: #B7B7B7; 
+	color: #FF582F; 
+	font-weight: bold;
+	border-radius: 5px;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	width: 70px;
+	cursor: pointer;
+}
+.divButton {
+	font-family: sans-serif, tahoma, arial; 
+	font-size: 14px; 
+	color: #000000;
+	border: 1px solid #FFFFFF; 
+	width: 115px;
+	cursor: pointer;
+	vertical-align: middle;
+	text-align: center;
+    transition-duration: 0.2s;
+}
+.divButton:hover {
+	font-family: sans-serif, tahoma, arial; 
+	font-size: 14px; 
+	color: #000000;
+	border: 1px solid #999999; 
+    border-radius: 5px;
+	background-color: #E9E9E9;
+	width: 115px;
+	cursor: pointer;
+	vertical-align: middle;
+	text-align: center;
+}
+.divButton.disabled{
+ 	border: 1px solid transparent;
+	color: #888 !important;
+	cursor: default;
+	opacity: 0.5;
+}
+.divButton.disabled:hover{
+    background-color: transparent;
+}
+.ddl {
+	border: 1px solid #C4C4C4;
+	font-family: sans-serif, tahoma, arial; 
+	font-size: 14px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	background-color: #FFFFFF;
+}
+.ddl2 {
+	border: 1px solid #C4C4C4;
+	font-family: sans-serif, tahoma, arial; 
+	font-size: 14px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	background-color: #FFFFFF;
+}
+.textLableLargeBold {
+	font-family: sans-serif, tahoma, arial; 
+	font-size: 20px; 
+	font-weight: bold;
+}
+.textBoxMain {
+	padding-bottom: 18px;
+	padding-top: 5px;
+	padding-left: 5px;
+	font-family: sans-serif, tahoma, arial; 
+	font-size: 24px;
+	border: 1px solid #C4C4C4; 
+	height: 200px; 
+	resize: none;
+}
+.boxDash {
+	border: 3px dashed #C4C4C4; 
+	border-style: dashed;	
+    border-radius: 10px;
+}
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+   background:#6cf;
+}
+#tblFile{
+	font-family: sans-serif, tahoma, arial; 
+	font-size: 14px; 
+}
+#tblFile table{
+    border-collapse: collapse;
+    width: 100%;
+}
+#tblFile th {
+	color: #4E4E4E;
+    padding: 5px;
+    font-weight: bold;
+}
+#tblFile tr {
+    border-bottom: 1px solid #ddd;
+}
+#tblFile td {
+	vertical-align: top;
+	color: #4E4E4E;
+    padding: 3px;
+    border-bottom: 1px solid #ddd;
+}
+#tblFile tr:nth-child(even){
+	background-color: #f2f2f2
+}
+.linkText {
+	color: blue;
+    text-decoration: underline;
+}
+.txt{
+	border: 1px solid #C4C4C4; 
+	font-family: sans-serif, tahoma, arial; 
+	font-size: 12px; 
+	padding: 2px 2px 2px 2px;
+}
+.rad,
+.ckb{
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+.rad > input,
+.ckb > input{ /* HIDE ORG RADIO & CHECKBOX */
+  visibility: hidden;
+  position: absolute;
+}
+/* RADIO & CHECKBOX STYLES */
+.rad > i,
+.ckb > i{     /* DEFAULT <i> STYLE */
+  display: inline-block;
+  vertical-align: middle;
+  width:  16px;
+  height: 16px;
+  border-radius: 50%;
+  /*transition: 0.1s;*/
+  box-shadow: inset 0 0 0 8px #fff;
+  border: 1px solid gray;
+  background: #909092;
+}
+/* CHECKBOX OVERWRITE STYLES */
+.ckb > i {
+  width: 25px;
+  border-radius: 3px;
+}
+.rad:hover > i{ /* HOVER <i> STYLE */
+  box-shadow: inset 0 0 0 2px #fff;
+  background: #909092;
+}
+.rad > input:checked + i{ /* (RADIO CHECKED) <i> STYLE */
+  box-shadow: inset 0 0 0 2px #fff;
+  background: #909092;
+}
+/* CHECKBOX */
+.ckb > input + i:after{
+  content: "";
+  display: block;
+  height: 12px;
+  width:  12px;
+  margin: 2px;
+  border-radius: inherit;
+  transition: inherit;
+  background: #909092;
+}
+.ckb > input:checked + i:after{ /* (RADIO CHECKED) <i> STYLE */
+  margin-left: 11px;
+  background:  #909092;
+}
+#tblFileProcess{
+	font-family: sans-serif, tahoma, arial; 
+	font-size: 14px; 
+}
+#tblFileProcess table{
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+#tblFileProcess th {
+	color: #4E4E4E;
+    padding: 5px;
+    font-weight: bold;
+}
+#tblFileProcess tr {
+    border-bottom: 1px solid #ddd;
+}
+#tblFileProcess td {
+	vertical-align: top;
+	color: #4E4E4E;
+    padding: 3px;
+    border-bottom: 1px solid #ddd;
+}
+#tblFileProcess tr:nth-child(even){
+	background-color: #f2f2f2
+}
+
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #909092;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}

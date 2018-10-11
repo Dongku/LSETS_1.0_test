@@ -1,0 +1,12 @@
+TestFile,demo.msg
+TestFile,demo.txt
+TestFile,demo1.docx
+TestFile,demo1.html
+TestFile,demo1.pptx
+TestFile,demo1.xlsx
+TestFile,demo2.doc
+TestFile,demo2.htm
+TestFile,demo2.ppt
+TestFile,demo2.xls
+TestFile,demo_97_2000_xp.doc
+Exit,Do Not Test

@@ -1,0 +1,563 @@
+
+<html>
+<head>
+<title>Automated Metric Report - Summary</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<style>
+body, div, table, thead, tbody, tfoot, tr, th, td, p, a {font-family: Tahoma,Verdana,Arial;font-size: 12px;color: black;}
+table {border-spacing: 0px;border-collapse: collapse;border: 1px solid silver;}
+td {border: 1px solid silver;padding-left: 3px;padding-right: 3px;padding-top: 2px;padding-bottom: 2px;}
+td.indexodd {background-color: #F7F7F7;vertical-align: top;font-weight: bold;text-align: center;}
+td.indexeven {vertical-align: top;font-weight: bold;text-align: center;}
+th {font-weight: bold;background-color: #F7F7F7;padding-left: 3px;padding-right: 3px;padding-top: 2px;padding-bottom: 2px;}
+th.candidate {text-align: left !important;padding-left: 4px;}
+th.title {font-size: 18px;text-align: left;}
+th.dataline {text-align: left;font-weight: normal;padding-bottom: 5px;}
+th.metricline {text-align: center;border-top: 1px solid silver;vertical-align: bottom;}
+th.metric {border-left: 1px solid silver;}
+th.truecase {border-left: 1px solid silver;}
+th.lowercase {border-left: 1px solid silver;}
+th.segmentlast {border-right: 1px red !important;}
+td.id {text-align: center;font-weight: bold;background-color: #F7F7F7;}
+td.score {text-align: center;vertical-align: top;}
+td.bestscore {font-weight: bold;background-color: #CCFFCC;}
+td.nodata {background-color: #F7F7F7;}
+td.lowercase {border-left: 1px solid silver;}
+td.reportheading {border: 0px !important;font-size: 20px;font-weight: bold;}
+table.reportheading {border: 0px !important;}
+table.metrics {margin-top: 20px;border: 1px solid silver;}
+div.usertitle {margin-top: 20px;font-weight: bold;font-size: 18px;font-style: italic;}
+td.break {border-top: 2px solid black;}
+td.source {background-color: #FFF1B5;}
+td.reference {background-color: #CCFFCC;}
+td.t {text-align: left;vertical-align: top;}
+span.del {color: red;text-decoration: line-through underline;}
+span.ins {color: green;text-decoration: underline;}
+.tooltip {position: relative;display: inline-block;border-bottom: 1px dotted black;}
+.tooltipdiff {position: relative;display: inline-block;border-bottom: 1px dotted black;}
+.tooltipdiff .tooltiptext {visibility: hidden; width: 100%;background-color: #555;color: #fff; text-align: center;padding: 5px 0; border-radius: 6px;position: absolute;z-index: 1;bottom: 125%;left: 15%;margin-left: -60px;opacity: 0;transition: opacity 0.3s;}
+.tooltipdiff .tooltiptext::after {content: "";position: absolute;top: 100%;left: 50%;margin-left: -5px;border-width: 5px;border-style: solid;border-color: #555 transparent transparent transparent;}
+.tooltipdiff:hover .tooltiptext {visibility: visible;opacity: 1;}
+td.filename {white-space: nowrap;}
+div.copyright {padding-top: 10px;}
+</style>
+</head>
+<body>
+<table class="reportheading">
+<tr>
+<td class="reportheading">
+<img src="data:image/png;base64,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" />
+</td>
+<td class="reportheading">Language Studio Automated Metric Report</td>
+</tr>
+</table>
+<div class="usertitle">Test Measurement</div>
+<table class="metrics">
+<tr>
+<th class="title" colspan="12">Full Test Set Metrics
+</th>
+</tr>
+<tr>
+<th class="dataline" colspan="12">
+<b>Date</b> : 2018-06-28 17:50:39 &nbsp;&nbsp;&nbsp;&nbsp;<b>Lines</b> : 12
+</th>
+</tr>
+<tr>
+<th rowspan="2" class="metricline">ID</th>
+<th rowspan="2" class="metricline candidate">Candidate</th>
+<th colspan="2" class="metricline metric"><a href="https://en.wikipedia.org/wiki/BLEU" title="BLEU Score - Bilingual Evaluation Understudy" target="_blank">BLEU</a></th>
+<th colspan="2" class="metricline metric"><a href="https://en.wikipedia.org/wiki/F1_score" target="_blank" title="F-Measure / F-Score">F-Measure</a></th>
+<th colspan="2" class="metricline metric"><a href="https://en.wikipedia.org/wiki/Levenshtein_distance" title="Levenshtein Distance / Edit Distance" target="_blank">Levenshtein</a></th>
+<th colspan="2" class="metricline metric"><a href="" title="Translation Error Rate" target="_blank">TER</a></th>
+<th colspan="2" class="metricline metric last"><a href="https://en.wikipedia.org/wiki/Word_error_rate" title="Word Error Rate" target="_blank">WER</a></th>
+</tr>
+<tr>
+<th class="truecase"><span class="tooltip" title="Case Sensitive">AbCd</span></th>
+<th class="lowercase"><span class="tooltip" title="Case Insensitive">abcd</span></th>
+<th class="truecase"><span class="tooltip" title="Case Sensitive">AbCd</span></th>
+<th class="lowercase"><span class="tooltip" title="Case Insensitive">abcd</span></th>
+<th class="truecase"><span class="tooltip" title="Case Sensitive">AbCd</span></th>
+<th class="lowercase"><span class="tooltip" title="Case Insensitive">abcd</span></th>
+<th class="truecase"><span class="tooltip" title="Case Sensitive">AbCd</span></th>
+<th class="lowercase"><span class="tooltip" title="Case Insensitive">abcd</span></th>
+<th class="truecase"><span class="tooltip" title="Case Sensitive">AbCd</span></th>
+<th class="lowercase last"><span class="tooltip" title="Case Insensitive">abcd</span></th>
+</tr>
+<tr>
+<td class="id source" title="Source Text - The original source text before it was translated."><span class="tooltip">S</span></td>
+<td class="filename">Source.txt</td>
+<td class="nodata truecase"></td>
+<td class="nodata lowercase"></td>
+<td class="nodata truecase"></td>
+<td class="nodata lowercase"></td>
+<td class="nodata truecase"></td>
+<td class="nodata lowercase"></td>
+<td class="nodata truecase"></td>
+<td class="nodata lowercase"></td>
+<td class="nodata truecase"></td>
+<td class="nodata lowercase last"></td>
+</tr>
+<tr>
+<td class="id reference" title="Reference Text - Human translation to be compaired against."><span class="tooltip">R</span></td>
+<td class="filename">Reference.txt</td>
+<td class="nodata truecase"></td>
+<td class="nodata lowercase"></td>
+<td class="nodata truecase"></td>
+<td class="nodata lowercase"></td>
+<td class="nodata truecase"></td>
+<td class="nodata lowercase"></td>
+<td class="nodata truecase"></td>
+<td class="nodata lowercase"></td>
+<td class="nodata truecase"></td>
+<td class="nodata lowercase last"></td>
+</tr>
+<tr>
+<td class="id" title="Candidate - To be compared to the human reference (R)"><span class="tooltip">C1</td>
+<td class="filename">Candidate1.txt</td>
+<td class="score truecase">42.21</td>
+<td class="score lowercase">42.21</td>
+<td class="score truecase">34.14</td>
+<td class="score lowercase">34.14</td>
+<td class="score truecase">8.21</td>
+<td class="score lowercase">8.21</td>
+<td class="score truecase">45.48</td>
+<td class="score lowercase">45.48</td>
+<td class="score truecase">45.48</td>
+<td class="score lowercase last">45.48</td>
+</tr>
+<tr>
+<td class="id" title="Candidate - To be compared to the human reference (R)"><span class="tooltip">C2</td>
+<td class="filename">Candidate2.txt</td>
+<td class="score truecase bestscore" title="Best Score">100.00</td>
+<td class="score lowercase bestscore" title="Best Score">100.00</td>
+<td class="score truecase bestscore" title="Best Score">85.71</td>
+<td class="score lowercase bestscore" title="Best Score">85.71</td>
+<td class="score truecase bestscore" title="Best Score">0.00</td>
+<td class="score lowercase bestscore" title="Best Score">0.00</td>
+<td class="score truecase bestscore" title="Best Score">0.00</td>
+<td class="score lowercase bestscore" title="Best Score" >0.00</td>
+<td class="score truecase bestscore" title="Best Score">0.00</td>
+<td class="score lowercase bestscore last" title="Best Score" >0.00</td>
+</tr>
+</html>
+</table>
+<table class="metrics">
+<tr>
+<th class="title" colspan="12">Segment Metrics
+</th>
+</tr>
+<tr>
+<th class="dataline" colspan="12">
+<b>Date</b> : 2018-06-28 17:50:39 <b>Lines</b> : 12
+</th>
+</tr>
+<tr>
+<th class="metricline">Line</th>
+<th class="metricline">ID</th>
+<th class="metricline candidate">Candidate</th>
+<th class="metricline"><a href="https://en.wikipedia.org/wiki/BLEU" target="_blank">BLEU</a><br />
+<span class="tooltip" title="Case Insensitive">abcd</span></th>
+<th class="metricline"><a href="https://en.wikipedia.org/wiki/Levenshtein_distance" target="_blank">Levenshtein</a><br />
+<span class="tooltip" title="Case Sensitive">AbCd</span></th>
+<th class="metricline"><a href="" target="_blank">TER</a><br />
+<span class="tooltip" title="Case Insensitive">abcd</span></th>
+<th class="metricline" style="border-right: 1px solid silver"><a href="https://en.wikipedia.org/wiki/Word_error_rate" target="_blank">WER</a><br />
+<span class="tooltip" title="Case Insensitive">abcd</span></th>
+</tr>
+<tr>
+<td class="indexodd" rowspan="4">1</td>
+<td class="id source">S</td>
+<td class="t">Laporan Metrik Automatik Studio Bahasa.</td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+</tr>
+<tr>
+<td class="id reference">R</td>
+<td class="t">Language Studio Automated Metric Report.</td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+</tr>
+<tr>
+<td class="id">C1</td>
+<td><div class="tooltipdiff">Language<span class="ins"> Studio Automated Metric Report</span>.<span class="tooltiptext">Language.</span></div></td>
+<td class="score">1.54</td>
+<td class="score">31</td>
+<td class="score">100</td>
+<td class="score">100</td>
+</tr>
+<tr>
+<td class="id">C2</td>
+<td><div class="tooltipdiff">Language Studio Automated Metric Report.<span class="tooltiptext">Language Studio Automated Metric Report.</span></div></td>
+<td class="score bestscore" title="Best Score">100.00</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+</tr>
+<tr>
+<td class="indexeven break" rowspan="4">2</td>
+<td class="id break source">S</td>
+<td class="t break">Laporan Metrik Automatik Studio Bahasa.</td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+</tr>
+<tr>
+<td class="id reference">R</td>
+<td class="t">Language Studio Automated Metric Report.</td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+</tr>
+<tr>
+<td class="id">C1</td>
+<td><div class="tooltipdiff">Language Studio<span class="ins"> Automated Metric Report</span>.<span class="tooltiptext">Language Studio.</span></div></td>
+<td class="score">16.95</td>
+<td class="score">24</td>
+<td class="score">80</td>
+<td class="score">80</td>
+</tr>
+<tr>
+<td class="id">C2</td>
+<td><div class="tooltipdiff">Language Studio Automated Metric Report.<span class="tooltiptext">Language Studio Automated Metric Report.</span></div></td>
+<td class="score bestscore" title="Best Score">100.00</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+</tr>
+<tr>
+<td class="indexodd break" rowspan="4">3</td>
+<td class="id break source">S</td>
+<td class="t break">Laporan Metrik Automatik Studio Bahasa.</td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+</tr>
+<tr>
+<td class="id reference">R</td>
+<td class="t">Language Studio Automated Metric Report.</td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+</tr>
+<tr>
+<td class="id">C1</td>
+<td><div class="tooltipdiff">Language Studio Automated<span class="ins"> Metric Report</span>.<span class="tooltiptext">Language Studio Automated.</span></div></td>
+<td class="score">36.30</td>
+<td class="score">14</td>
+<td class="score">60</td>
+<td class="score">60</td>
+</tr>
+<tr>
+<td class="id">C2</td>
+<td><div class="tooltipdiff">Language Studio Automated Metric Report.<span class="tooltiptext">Language Studio Automated Metric Report.</span></div></td>
+<td class="score bestscore" title="Best Score">100.00</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+</tr>
+<tr>
+<td class="indexeven break" rowspan="4">4</td>
+<td class="id break source">S</td>
+<td class="t break">Laporan Metrik Automatik Studio Bahasa.</td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+</tr>
+<tr>
+<td class="id reference">R</td>
+<td class="t">Language Studio Automated Metric Report.</td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+</tr>
+<tr>
+<td class="id">C1</td>
+<td><div class="tooltipdiff">Language Studio Automated Metric<span class="ins"> Report</span>.<span class="tooltiptext">Language Studio Automated Metric.</span></div></td>
+<td class="score">52.08</td>
+<td class="score">7</td>
+<td class="score">40</td>
+<td class="score">40</td>
+</tr>
+<tr>
+<td class="id">C2</td>
+<td><div class="tooltipdiff">Language Studio Automated Metric Report.<span class="tooltiptext">Language Studio Automated Metric Report.</span></div></td>
+<td class="score bestscore" title="Best Score">100.00</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+</tr>
+<tr>
+<td class="indexodd break" rowspan="4">5</td>
+<td class="id break source">S</td>
+<td class="t break">Laporan Metrik Automatik Studio Bahasa.</td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+</tr>
+<tr>
+<td class="id reference">R</td>
+<td class="t">Language Studio Automated Metric Report.</td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+</tr>
+<tr>
+<td class="id">C1</td>
+<td><div class="tooltipdiff">Language Studio Automated Metric Report.<span class="tooltiptext">Language Studio Automated Metric Report.</span></div></td>
+<td class="score bestscore" title="Best Score">100.00</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+</tr>
+<tr>
+<td class="id">C2</td>
+<td><div class="tooltipdiff">Language Studio Automated Metric Report.<span class="tooltiptext">Language Studio Automated Metric Report.</span></div></td>
+<td class="score bestscore" title="Best Score">100.00</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+</tr>
+<tr>
+<td class="indexeven break" rowspan="4">6</td>
+<td class="id break source">S</td>
+<td class="t break">Bahasa.</td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+</tr>
+<tr>
+<td class="id reference">R</td>
+<td class="t">Language.</td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+</tr>
+<tr>
+<td class="id">C1</td>
+<td><div class="tooltipdiff">Language<span class="del"> Studio</span>.<span class="tooltiptext">Language Studio.</span></div></td>
+<td class="score">63.89</td>
+<td class="score">7</td>
+<td class="score">100</td>
+<td class="score">100</td>
+</tr>
+<tr>
+<td class="id">C2</td>
+<td><div class="tooltipdiff">Language.<span class="tooltiptext">Language.</span></div></td>
+<td class="score bestscore" title="Best Score">100.00</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+</tr>
+<tr>
+<td class="indexodd break" rowspan="4">7</td>
+<td class="id break source">S</td>
+<td class="t break">Studio Bahasa.</td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+</tr>
+<tr>
+<td class="id reference">R</td>
+<td class="t">Language Studio.</td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+</tr>
+<tr>
+<td class="id">C1</td>
+<td><div class="tooltipdiff">Language Studio<span class="del"> Automated</span>.<span class="tooltiptext">Language Studio Automated.</span></div></td>
+<td class="score">53.73</td>
+<td class="score">10</td>
+<td class="score">100</td>
+<td class="score">100</td>
+</tr>
+<tr>
+<td class="id">C2</td>
+<td><div class="tooltipdiff">Language Studio.<span class="tooltiptext">Language Studio.</span></div></td>
+<td class="score bestscore" title="Best Score">100.00</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+</tr>
+<tr>
+<td class="indexeven break" rowspan="4">8</td>
+<td class="id break source">S</td>
+<td class="t break">Language Studio Automated.</td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+</tr>
+<tr>
+<td class="id reference">R</td>
+<td class="t">Language Studio Automated.</td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+</tr>
+<tr>
+<td class="id">C1</td>
+<td><div class="tooltipdiff">Language Studio Automated<span class="del"> Metric</span>.<span class="tooltiptext">Language Studio Automated Metric.</span></div></td>
+<td class="score">47.29</td>
+<td class="score">7</td>
+<td class="score">67</td>
+<td class="score">67</td>
+</tr>
+<tr>
+<td class="id">C2</td>
+<td><div class="tooltipdiff">Language Studio Automated.<span class="tooltiptext">Language Studio Automated.</span></div></td>
+<td class="score bestscore" title="Best Score">100.00</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+</tr>
+<tr>
+<td class="indexodd break" rowspan="4">9</td>
+<td class="id break source">S</td>
+<td class="t break">Metric Automated Studio Bahasa.</td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+</tr>
+<tr>
+<td class="id reference">R</td>
+<td class="t">Language Studio Automated Metric.</td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+</tr>
+<tr>
+<td class="id">C1</td>
+<td><div class="tooltipdiff">Language Studio Automated Metric<span class="del"> Report</span>.<span class="tooltiptext">Language Studio Automated Metric Report.</span></div></td>
+<td class="score">50.81</td>
+<td class="score">7</td>
+<td class="score">50</td>
+<td class="score">50</td>
+</tr>
+<tr>
+<td class="id">C2</td>
+<td><div class="tooltipdiff">Language Studio Automated Metric.<span class="tooltiptext">Language Studio Automated Metric.</span></div></td>
+<td class="score bestscore" title="Best Score">100.00</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+</tr>
+<tr>
+<td class="indexeven break" rowspan="4">10</td>
+<td class="id break source">S</td>
+<td class="t break">Laporan Metrik Automatik Studio Bahasa</td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+</tr>
+<tr>
+<td class="id reference">R</td>
+<td class="t">Language Studio Automated Metric Report</td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+</tr>
+<tr>
+<td class="id">C1</td>
+<td><div class="tooltipdiff">Language Studio Automated Metric Report<span class="tooltiptext">Language Studio Automated Metric Report</span></div></td>
+<td class="score bestscore" title="Best Score">100.00</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+</tr>
+<tr>
+<td class="id">C2</td>
+<td><div class="tooltipdiff">Language Studio Automated Metric Report<span class="tooltiptext">Language Studio Automated Metric Report</span></div></td>
+<td class="score bestscore" title="Best Score">100.00</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+</tr>
+<tr>
+<td class="indexodd break" rowspan="4">11</td>
+<td class="id break source">S</td>
+<td class="t break">Laporan Metrik Automatik Studio Bahasa.</td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+</tr>
+<tr>
+<td class="id reference">R</td>
+<td class="t">Language Studio Automated Metric Report.</td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+</tr>
+<tr>
+<td class="id">C1</td>
+<td><div class="tooltipdiff">Language Studio Automated <span class="del">S</span><span class="ins">Me</span>t<span class="del">ud</span><span class="ins">r</span>i<span class="del">o</span><span class="ins">c</span> Report.<span class="tooltiptext">Language Studio Automated Studio Report.</span></div></td>
+<td class="score">53.73</td>
+<td class="score">5</td>
+<td class="score">20</td>
+<td class="score">20</td>
+</tr>
+<tr>
+<td class="id">C2</td>
+<td><div class="tooltipdiff">Language Studio Automated Metric Report.<span class="tooltiptext">Language Studio Automated Metric Report.</span></div></td>
+<td class="score bestscore" title="Best Score">100.00</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+</tr>
+<tr>
+<td class="indexeven break" rowspan="4">12</td>
+<td class="id break source">S</td>
+<td class="t break">Laporan Metrik Automatik Studio Bahasa.</td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+<td class="nodata break"></td>
+</tr>
+<tr>
+<td class="id reference">R</td>
+<td class="t">Language Studio Automated Metric Report.</td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+<td class="nodata"></td>
+</tr>
+<tr>
+<td class="id">C1</td>
+<td><div class="tooltipdiff">Language Studio Automat<span class="del">ion</span><span class="ins">ed</span> Metric Report.<span class="tooltiptext">Language Studio Automation Metric Report.</span></div></td>
+<td class="score">45.18</td>
+<td class="score">3</td>
+<td class="score">20</td>
+<td class="score">20</td>
+</tr>
+<tr>
+<td class="id">C2</td>
+<td><div class="tooltipdiff">Language Studio Automated Metric Report.<span class="tooltiptext">Language Studio Automated Metric Report.</span></div></td>
+<td class="score bestscore" title="Best Score">100.00</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+<td class="score bestscore" title="Best Score">0</td>
+</tr>
+</table><div class="copyright">Copyright &copy; 2018, Omniscien Technologies - All Rights Reserved.</div></body></html>

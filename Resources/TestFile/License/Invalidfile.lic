@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <settings>
+    <projectno>1</projectno>
+    <api enabled="1">
+  <apikey>RESTAPIKey-lsetsruntime</apikey>
+  <apiurl>http://172.17.101.140:9050/lsrestapi/LSRESTAPI.V5.jsp</apiurl>
+ </api>
+    <autodetectsourcelang enabled="0"/>
+    <displaypageplanguageoption enable="0"/>
+    <rtllanglist>ar,dv,fa,he,ku,ur</rtllanglist>
+ <emaildocumentoncompletion enable="1">
+   <smtpserver></smtpserver>
+   <smtpport></smtpport>
+   <smtpusername></smtpusername>
+   <smtppassword></smtppassword>
+   <smtpencryptiontype>None</smtpencryptiontype>
+   <body><![CDATA[]]></body>
+   <sendernamedefault>Translation Admin</sendernamedefault>
+   <senderemaildefault>LSETX@omniscien.com</senderemaildefault>
+   <subjectdefault>The translation output</subjectdefault>  
+   <bodydefault><![CDATA[]]></bodydefault>
+   <prioritydefault>3</prioritydefault>
+ </emaildocumentoncompletion>   
+    <pdfsupport enabled="0">
+      <TODO>CONFIG FOR ABBYY</TODO>
+    </pdfsupport>
+  </settings>
+  <display>
+    <pagecss><![CDATA[]]></pagecss>
+    <lang id="en" name="English">
+      <heading>
+        <logourl>/resources/images/Logo.png</logourl>
+        <pageheading>Questel Hybrid Deep NMT/SMT Trial</pageheading>
+      </heading>
+      <translationchoices>
+        <buttontranslate>Translate</buttontranslate>
+        <buttonreset>Reset</buttonreset>
+        <buttoncopy>Copy</buttoncopy>
+        <cleartooltip>Clear Text</cleartooltip>
+        <copytooltip>Copy to Clipbord</copytooltip>
+      </translationchoices>
+      <translationbox>
+        <textheaderlabel>Text</textheaderlabel>
+  <textplaceholder>Enter text here...</textplaceholder>  
+        <translationplaceholder>Text translation...</translationplaceholder>
+      </translationbox>
+      <documentbox>
+        <headinglable>Document(s)</headinglable>
+        <draglabel1>Drag and Drop Files</draglabel1>
+        <draglabel2>into this Box</draglabel2>
+        <draglabel3>or</draglabel3>  
+        <buttonbrowse>Browse for Files</buttonbrowse>
+        <documentoutputformatlabel>Output Format</documentoutputformatlabel>
+        <sameasdocumentlabel>Same as Document</sameasdocumentlabel>
+        <htmllabel>HTML</htmllabel>
+        <textlabel>Text file</textlabel>  
+        <documentaftertranslationlabel>After Translation</documentaftertranslationlabel>
+        <downloadlabel>Download Document</downloadlabel>
+        <emaildocumentlabel>Email Document as Attachment </emaildocumentlabel>
+  <selectfile>Select the engine and click translate button.</selectfile>
+  <tblfilename>Document(s) to translate</tblfilename>
+  <tblsize>Size</tblsize>
+  <tbllanguagepair>Language Pair</tbllanguagepair>
+  <tblstatus>Status</tblstatus>
+      </documentbox>
+   <translate>
+  <statusqueue>Queue</statusqueue>
+  <statusprocessing>Processing</statusprocessing>
+  <statuscomplete>Complete</statuscomplete>
+  <statuserror>Error</statuserror>
+  <statuscancel>Cancel</statuscancel>
+   </translate>
+      <domainnamemapping>
+        <domain id="1311267:1311267">English to French (Questel Patents Classbase-DNMT Hybrid)</domain>
+        <domain id="1311153:1311153">French to English (Questel Patents Classbase-DNMT Hybrid)</domain>
+      </domainnamemapping>
+      <errortext>
+  <errormaxchar>Maximum characters exceeded</errormaxchar>
+        <error id="1">Invalid document type.</error>
+        <error id="2">Unable to open document, may be corrupt.</error>
+        <error id="3">Another error</error>
+      </errortext>
+    </lang>
+ <lang id="fr" name="French">
+      <heading>
+        <logourl>/resources/images/Logo.png</logourl>
+        <pageheading>Essai Hybrid Deep NMT/SMT de Questel</pageheading>
+      </heading>
+      <translationchoices>
+        <buttontranslate>Traduire</buttontranslate>
+        <buttonreset>Réinitialiser</buttonreset>
+        <buttoncopy>Copie</buttoncopy>
+        <cleartooltip>Effacer le texte</cleartooltip>
+        <copytooltip>Copier dans le bloc-notes</copytooltip>
+      </translationchoices>
+      <translationbox>
+        <textheaderlabel>Texte</textheaderlabel>
+  <textplaceholder>Entrez le texte ici...</textplaceholder>  
+        <translationplaceholder>Traduction du texte...</translationplaceholder>
+      </translationbox>
+      <documentbox>
+        <headinglable>Document(s)</headinglable>
+        <draglabel1>Glisser-déposer des fichiers</draglabel1>
+        <draglabel2>dans cette boîte</draglabel2>
+        <draglabel3>Ou</draglabel3>  
+        <buttonbrowse>Rechercher des fichiers</buttonbrowse>
+        <documentoutputformatlabel>Format de sortie</documentoutputformatlabel>
+        <sameasdocumentlabel>Même que le document</sameasdocumentlabel>
+        <htmllabel>HTML</htmllabel>
+        <textlabel>Fichier texte</textlabel>  
+        <documentaftertranslationlabel>Après la traduction</documentaftertranslationlabel>
+        <downloadlabel>Télécharger le document</downloadlabel>
+        <emaildocumentlabel>Envoyer le document par courriel en pièce jointe</emaildocumentlabel>
+  <selectfile>Sélectionnez le moteur et cliquez sur le bouton</selectfile>
+  <tblfilename>Document(s) à traduire</tblfilename>
+  <tblsize>Taille</tblsize>
+  <tbllanguagepair>Paire de langues</tbllanguagepair>
+  <tblstatus>Statut</tblstatus>
+      </documentbox>
+   <translate>
+  <statusqueue>Ajouter a la file d'attente</statusqueue>
+  <statusprocessing>Traitement en cours</statusprocessing>
+  <statuscomplete>Terminé</statuscomplete>
+  <statuserror>Erreur</statuserror>
+  <statuscancel>Annuler</statuscancel>
+   </translate>
+      <domainnamemapping>
+        <domain id="1311267:1311267">English to French (Questel Patents Classbase-DNMT Hybrid)</domain>
+        <domain id="1311153:1311153">French to English (Questel Patents Classbase-DNMT Hybrid)</domain>
+      </domainnamemapping>
+      <errortext>
+  <errormaxchar>Maximum characters exceeded</errormaxchar>
+        <error id="1">Invalid document type.</error>
+        <error id="2">Unable to open document, may be corrupt.</error>
+        <error id="3">Another error</error>
+      </errortext>
+    </lang>
+    <lang id="zh" name="中文"  textalign="right">
+      <heading>
+        <logourl>/resources/images/Logo.png</logourl>
+        <pageheading>Questel Hybrid 深 NMT/SMT 试验</pageheading>
+      </heading>
+      <translationchoices>
+        <buttontranslate>翻译</buttontranslate>
+        <buttonreset>重启</buttonreset>
+        <buttoncopy>复制</buttoncopy>
+        <cleartooltip>明文</cleartooltip>
+        <copytooltip>复制到剪贴板</copytooltip>
+      </translationchoices>
+      <translationbox>
+        <textheaderlabel>文本</textheaderlabel>
+  <textplaceholder>在此输入文字…</textplaceholder>  
+        <translationplaceholder>文字翻译...</translationplaceholder>
+      </translationbox>
+      <documentbox>
+        <headinglable>文件</headinglable>
+        <draglabel1>拖放文件</draglabel1>
+        <draglabel2>进入这个盒子</draglabel2>
+        <draglabel3>要么</draglabel3>
+        <buttonbrowse>浏览文件</buttonbrowse>  
+        <documentoutputformatlabel>输出格式</documentoutputformatlabel>
+        <sameasdocumentlabel>与文档相同</sameasdocumentlabel>
+        <htmllabel>超文本标记语言</htmllabel>
+        <textlabel>文本文件</textlabel>  
+        <documentaftertranslationlabel>翻译后</documentaftertranslationlabel>
+        <downloadlabel>下载文件</downloadlabel>
+        <emaildocumentlabel>电子邮件文档作为附件</emaildocumentlabel>
+  <selectfile>选择引擎，然后单击翻译按钮。</selectfile>
+  <tblfilename>要翻译的文件</tblfilename>
+  <tblsize>尺寸</tblsize>
+  <tbllanguagepair>语言对</tbllanguagepair>
+  <tblstatus>状态</tblstatus>
+      </documentbox>
+   <translate> 
+  <statusqueue>队列</statusqueue>
+  <statusprocessing>处理</statusprocessing>
+  <statuscomplete>完成</statuscomplete>
+  <statuserror>错误</statuserror>
+  <statuscancel>取消</statuscancel>
+   </translate>
+      <domainnamemapping>
+        <domain id="1311267:1311267">English to French (Questel Patents Classbase-DNMT Hybrid)</domain>
+        <domain id="1311153:1311153">French to English (Questel Patents Classbase-DNMT Hybrid)</domain>
+      </domainnamemapping>
+      <errortext>
+  <errormaxchar>最大字符数超过</errormaxchar>
+      </errortext>
+    </lang>
+    <lang id="th" name="ภาษาไทย">
+      <heading>
+        <logourl>/resources/images/Logo.png</logourl>
+        <pageheading>การทดสอบ NMT/SMT Hybrid สำหรับ Questel</pageheading>
+      </heading>
+      <translationchoices>
+        <buttontranslate>แปล</buttontranslate>
+        <buttonreset>ล้าง</buttonreset>
+        <buttoncopy>คัดลอก</buttoncopy>
+        <cleartooltip>ล้างข้อความ</cleartooltip>
+        <copytooltip>คัดลอกข้อความ</copytooltip>
+      </translationchoices>
+      <translationbox>
+        <textheaderlabel>ข้อความ</textheaderlabel>
+  <textplaceholder>พิมพ์ข้อความ...</textplaceholder>  
+        <translationplaceholder>ผลการแปล...</translationplaceholder>
+      </translationbox>
+      <documentbox>
+        <headinglable>เอกสาร</headinglable>
+        <draglabel1>ลากและวางไฟล์</draglabel1>
+        <draglabel2>บริเวณนี้</draglabel2>
+        <draglabel3>หรือ</draglabel3>  
+        <buttonbrowse>เลือกไฟล์</buttonbrowse>
+        <documentoutputformatlabel>รูปแบบผลลัพธ์</documentoutputformatlabel>
+        <sameasdocumentlabel>เหมือนเอกสารต้นฉบับ</sameasdocumentlabel>
+        <htmllabel>HTML</htmllabel>
+        <textlabel>ไฟล์ข้อความ</textlabel>  
+        <documentaftertranslationlabel>การรับผลการแปล</documentaftertranslationlabel>
+        <downloadlabel>ดาวน์โหลดเอกสาร</downloadlabel>
+        <emaildocumentlabel>ส่งอีเมล์</emaildocumentlabel>
+  <selectfile>เลือกภาษาและกดปุ่มแปล</selectfile>
+  <tblfilename>เอกสารแปล</tblfilename>
+  <tblsize>ขนาดไฟล์</tblsize>
+  <tbllanguagepair>คู่ภาษา</tbllanguagepair>
+  <tblstatus>สถานะการแปล</tblstatus>
+      </documentbox>
+   <translate> 
+  <statusqueue>คิว</statusqueue>
+  <statusprocessing>อยู่ระหว่างการแปล</statusprocessing>
+  <statuscomplete>เสร็จสิ้น</statuscomplete>
+  <statuserror>เกิดข้อผิดพลาด</statuserror>
+  <statuscancel>ยกเลิก</statuscancel>
+   </translate>
+      <domainnamemapping>
+        <domain id="1311267:1311267">จากภาษาอังกฤษเป็นภาษาฝรั่งเศส (Questel Patents Classbase-DNMT Hybrid)</domain>
+        <domain id="1311153:1311153">จากภาษาฝรั่งเศสเป็นภาษาอังกฤษ (Questel Patents Classbase-DNMT Hybrid)</domain>
+      </domainnamemapping>
+      <errortext>
+  <errormaxchar>มีอักขระเกินจำนวนที่กำหนดไว้</errormaxchar>
+      </errortext>
+    </lang>
+  </display>
+</config>
